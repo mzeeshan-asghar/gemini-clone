@@ -1,0 +1,125 @@
+.primaryHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: aliceblue;
+  padding: 1.8rem 1.6rem 1.6rem;
+
+  & div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  & .dropDownContainer {
+    flex-direction: column;
+    position: relative;
+    align-items: start;
+
+    & .dropDownBtn {
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 2.8rem;
+      color: #caccce;
+      margin: 0 auto 0 0.8rem;
+      z-index: 99;
+    }
+
+    & .dropDownList {
+      position: absolute;
+      top: 2rem;
+      left: 0;
+      padding: 1rem 0 0.3rem 0;
+      width: 27rem;
+      background-color: #282a2c;
+      border-radius: 1rem;
+      flex-direction: column;
+      z-index: 11;
+      opacity: 0;
+      transition: all 0.3s ease-in;
+
+      & .option {
+        width: 100%;
+        justify-content: start;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 2rem;
+        gap: 1rem;
+        padding: 1rem 1.6rem;
+
+        &:first-child {
+          cursor: pointer;
+
+          & .material-symbols-outlined {
+            margin: 0 1.6rem 0 auto;
+          }
+
+          &:hover {
+            background-color: #393b3d;
+          }
+        }
+
+        &:last-child * {
+          opacity: 0.5;
+        }
+
+        & button {
+          padding: 1rem 1.6rem;
+          margin-left: auto;
+          border-radius: 0.4rem;
+          background-color: #1b1b1b;
+          color: #ffffff;
+          opacity: 1 !important;
+          transition: 0.2s ease;
+
+          &:hover {
+            background-color: #2d2d2d;
+          }
+        }
+      }
+    }
+
+    & .showDropdown {
+      opacity: 1;
+      top: 3.4rem;
+    }
+  }
+
+  & .headerOptions {
+    gap: 2rem;
+    justify-content: end;
+
+    & .upgradeBtn {
+      padding: 1rem 1.6rem;
+      background-color: #37393b;
+      border-radius: 1rem;
+      color: #ffffff;
+      font-size: 1.2rem;
+      font-weight: 500;
+      letter-spacing: 0.1px;
+      gap: 1rem;
+
+      & svg {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+    }
+
+    & .myAccount button {
+      width: 3.2rem;
+      height: 3.2rem;
+      border-radius: 50%;
+      border: 1px solid #202124;
+      background-color: #f4511e;
+      color: #ffffff;
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+  }
+}

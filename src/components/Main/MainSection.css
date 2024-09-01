@@ -1,0 +1,33 @@
+main {
+  flex: 1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  overflow-y: auto;
+  position: relative;
+
+  /* Target the scrollbar */
+  &::-webkit-scrollbar {
+    width: 7px; /* width of the scrollbar */
+  }
+
+  /* Track (the area on which the thumb moves) */
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Handle (the draggable part of the scrollbar) */
+  &::-webkit-scrollbar-thumb {
+    background: #80868b;
+    border-radius: 6px;
+    min-height: 30px !important; /* Adjust as needed */
+    padding: 5px 0; /* Adjust padding for desired effect */
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #4c4e50;
+  }
+}
